@@ -1,0 +1,434 @@
+@charset "utf-8";
+@import './mixin/mixin';
+//天猫超市
+.mart {
+    width: 100%;
+    height: 655px;
+    margin-top: 20px;
+    .head {
+        width: 214px;
+        height: 28px;
+        margin-bottom: 10px;
+    }
+    .mart-main {
+        width: 100%;
+        height: 618px;
+        position: relative;
+        @include row(space-between);
+        .l {
+            width: 235px;
+            height: 618px;
+            position: relative;
+            .l-title {
+                width: 218px;
+                height: 64px;
+                position: absolute;
+                bottom: 20%;
+                left: 0;
+                .l-title-l {
+                    width: 70px;
+                    height: 64px;
+                    background: rgba(0, 0, 0, .9);
+                    float: left;
+                    padding: 8px 15px;
+                    p {
+                        color: #fff;
+                        line-height: 24px;
+                        font-size: 18px;
+                    }
+                }
+                .l-title-r {
+                    width: 128px;
+                    height: 64px;
+                    background: rgba(0, 0, 0, .6);
+                    float: left;
+                    padding: 8px 15px;
+                    span {
+                        display: block;
+                        color: #fff;
+                        line-height: 24px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .b-title {
+                width: 47px;
+                height: 52px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: url(../images/mart-icon.png) no-repeat;
+                background-size: 32px 32px;
+            }
+            &:hover {
+                background: white;
+                opacity: .7;
+            }
+        }
+        .c {
+            width: 484px;
+            height: 618px;
+            @include col(space-between);
+        }
+        .r {
+            width: 483px;
+            height: 618px;
+            @include col(space-between);
+        }
+        .c-t {
+            width: 100%;
+            height: 301px;
+            background: #fff;
+            .mart-tab {
+                width: 462px;
+                height: 282px;
+                margin: 10px;
+                background: #fff;
+                box-shadow: 0 2px 8px 5px rgba(0, 0, 0, .09);
+                position: relative;
+                li {
+                    width: 231px;
+                    height: 57px;
+                    background: #F1F1F1;
+                    float: left;
+                    text-align: center;
+                    line-height: 57px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    color: #000;
+                }
+                .active {
+                    color: #fff;
+                    background: #00B262;
+                }
+                .title {
+                    width: 291px;
+                    height: 87px;
+                    background: url(../images/mart-titlebg.png)no-repeat 0 center;
+                    position: absolute;
+                    left: 0;
+                    top: 143px;
+                    z-index: 1;
+                    padding-left: 26px;
+                    .t {
+                        padding-top: 8px;
+                        img {
+                            width: 23px;
+                            height: 23px;
+                            vertical-align: middle;
+                        }
+                        span {
+                            font-weight: 900;
+                            font-size: 24px;
+                            color: #00B262;
+                            margin-left: 8px;
+                            vertical-align: middle;
+                            letter-spacing: 1px;
+                        }
+                    }
+                    .b {
+                        font-size: 20px;
+                        color: #000;
+                        letter-spacing: 1px;
+                    }
+                }
+                .titlebg {
+                    width: 200px;
+                    height: 200px;
+                    position: absolute;
+                    top: 67px;
+                    right: 30px;
+                }
+                .tabs {
+                    display: none;
+                }
+                .div {
+                    display: block;
+                }
+            }
+        }
+        .c-b {
+            width: 100%;
+            height: 301px;
+            @include row(space-between);
+            .c-b-l {
+                width: 235px;
+                height: 301px;
+            }
+            .c-b-r {
+                width: 235px;
+                height: 301px;
+            }
+        }
+        .r-t {
+            width: 100%;
+            height: 301px;
+            @include row(space-between);
+            .r-t-l {
+                width: 235px;
+                height: 301px;
+            }
+            .r-t-r {
+                width: 235px;
+                height: 301px;
+            }
+        }
+        .r-b {
+            width: 100%;
+            height: 301px;
+            @include row(space-between);
+            .r-b-l {
+                width: 235px;
+                height: 301px;
+            }
+            .r-b-r {
+                width: 235px;
+                height: 301px;
+            }
+        }
+    }
+}
+
+//公共盒子模块
+.bg {
+    border: 1px solid #fff;
+    background: #fff;
+    &:hover {
+        background: white;
+        opacity: .7;
+        cursor: pointer;
+        border-color: red;
+    }
+}
+
+.box {
+    position: relative;
+    img {
+        display: block;
+        width: 185px;
+        height: 185px;
+        margin: 20px auto 0;
+    }
+    .simg {
+        display: block;
+        width: 170px;
+        height: 170px;
+        position: absolute;
+        top: 90px;
+        left: 32px;
+    }
+    .title {
+        width: 135px;
+        height: 40px;
+        margin: 8px auto;
+        overflow: hidden;
+        font-size: 14px;
+        color: #333;
+    }
+    .stitle {
+        width: 100%;
+        height: 24px;
+        padding-left: 25px;
+        font-size: 18px;
+        line-height: 24px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        position: absolute;
+        top: 20px;
+    }
+    .spice {
+        display: block;
+        font-size: 18px;
+        color: #FF0036;
+        line-height: 18px;
+        margin: 10px auto;
+        text-align: center;
+        text-indent: -5px;
+    }
+    .sspice {
+        width: 100%;
+        height: 18px;
+        position: absolute;
+        top: 49px;
+        padding-left: 25px;
+        font-size: 14px;
+        height: 18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #7A45E5;
+    }
+}
+
+//天猫国际--模块
+.buy-module {
+    width: 100%;
+    height: 655px;
+    margin-top: 20px;
+    .module-head {
+        width: 300px;
+        height: 28px;
+        margin-bottom: 10px;
+        @include row(flex-start);
+        img {
+            width: 214px;
+            height: 28px;
+        }
+        i {
+            width: 5px;
+            height: 18px;
+            background: #333;
+            margin-right: 10px;
+            float: left;
+        }
+        .ch {
+            width: 75px;
+            height: 28px;
+            line-height: 28px;
+            font-size: 18px;
+            color: #000;
+            margin-right: 10px;
+            float: left;
+        }
+        .en {
+            height: 28px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #000;
+            float: left;
+            padding-top: 4px;
+        }
+    }
+    .l {
+        width: 235px;
+        height: 618px;
+        position: relative;
+        float: left;
+        .l-title {
+            width: 218px;
+            height: 64px;
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+            .l-title-l {
+                width: 70px;
+                height: 64px;
+                background: rgba(0, 0, 0, .9);
+                float: left;
+                padding: 8px 15px;
+                p {
+                    color: #fff;
+                    line-height: 24px;
+                    font-size: 18px;
+                }
+            }
+            .l-title-r {
+                width: 128px;
+                height: 64px;
+                background: rgba(0, 0, 0, .6);
+                float: left;
+                padding: 8px 15px;
+                span {
+                    display: block;
+                    color: #fff;
+                    line-height: 24px;
+                    font-size: 18px;
+                }
+            }
+        }
+        .b-title {
+            width: 47px;
+            height: 52px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: url(../images/mart-icon.png) no-repeat;
+            background-size: 32px 32px;
+        }
+        &:hover {
+            background: white;
+            opacity: .7;
+        }
+    }
+    .r {
+        float: left;
+        flex-wrap: wrap;
+        ul {
+            width: 995px;
+            height: 618px;
+            margin: 0;
+        }
+        .bg {
+            display: block;
+            width: 235px;
+            height: 301px;
+            margin: 0 0 15px 13px;
+            float: left;
+        }
+        li:nth-of-type(n+5) {
+            margin-bottom: 0;
+        }
+    }
+    .two {
+        width: 235px;
+        height: 618px;
+        float: left;
+        @include col(space-between);
+        .l {
+            width: 235px;
+            height: 301px;
+        }
+    }
+}
+
+//活动标题
+.h1 {
+    width: 100%;
+    height: 90px;
+    margin-top: 10px;
+    overflow: hidden;
+    img {
+        width: 1620px;
+        height: 90px;
+        margin-left: -165px;
+    }
+}
+
+//居家生活
+.life {
+    .sspice {
+        color: #00B262;
+    }
+}
+
+.home {
+    .sspice {
+        color: #FF0036;
+    }
+}
+
+//猜你喜欢
+.like {
+    margin-top: 30px;
+    h2 {
+        margin: 0;
+        text-align: center;
+    }
+    span {
+        height: 43px;
+        font-size: 20px;
+        color: #666;
+        margin: 0 4px;
+        font-weight: 100;
+    }
+    ul {
+        @include row(space-between);
+        flex-wrap: wrap;
+        li {
+            width: 235px;
+            height: 301px;
+            margin-bottom: 13px;
+        }
+    }
+}

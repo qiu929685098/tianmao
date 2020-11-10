@@ -1,0 +1,91 @@
+@charset "utf-8";
+@import './mixin/mixin';
+//底部标题
+.font-title {
+    width: 80px;
+    height: 45px;
+    margin: 0 auto 10px;
+    background: url(../images/foot-title.png) no-repeat;
+    background-size: cover;
+}
+
+footer {
+    width: 100%;
+    height: 603px;
+    border-top: 1px solid #D1D7DC;
+    background: #fff url(../images/font-bg.png) no-repeat center bottom;
+    background-size: 1702px 410px;
+    .title {
+        width: 100%;
+        height: 100px;
+        margin: 25px auto;
+        background: url(../images/font-nav.jpg) no-repeat;
+        @include row(space-between);
+        a {
+            display: block;
+            width: 297px;
+            height: 100px;
+        }
+    }
+    .c {
+        clear: both;
+        width: 100%;
+        height: 225px;
+        padding-top: 22px;
+        border-top: 1px solid #ededed;
+        background: #fff url(../images/font-c-bg.png) no-repeat 45px bottom;
+        background-size: 68px 25px;
+        ul {
+            margin: 0;
+            width: 238px;
+            height: 190px;
+            padding-left: 52px;
+            float: left;
+            .c-li {
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                color: #646464;
+                font-weight: 900;
+                font-size: 16px;
+            }
+            a {
+                width: 100px;
+                height: 20px;
+                line-height: 20px;
+                color: #8b8b8b;
+                font-size: 12px;
+                font-weight: 100;
+            }
+            img {
+                width: 105px;
+                height: 105px;
+            }
+        }
+    }
+    .bottom {
+        width: 100%;
+        border: 2px solid #FF0036;
+        background: #000;
+        p {
+            margin: 0;
+            padding: 5px 0 0;
+            color: #fff;
+            line-height: 25px;
+            a {
+                margin-right: 3px;
+                font-size: 12px;
+                color: #fff;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .b-bg {
+            margin-top: 5px;
+            width: 100%;
+            height: 150px;
+        }
+    }
+}
