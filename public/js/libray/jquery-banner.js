@@ -168,6 +168,3 @@ $.fn.extend({
     }
 });
 $.fn.carousel.defaults = { width: 800, height: 300, speed: 3000, needPrevAndNextBtnGroup: true, needPagination: true };
-
-// export default cookie;
-console.log(1);

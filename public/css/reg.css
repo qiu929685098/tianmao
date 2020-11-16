@@ -1,0 +1,255 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f5f5f5;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  vertical-align: middle;
+}
+
+.center {
+  width: 1230px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  font-family: "Microsoft YaHei", SimSun, '\5b8b\4f53', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.reg {
+  width: 990px;
+  height: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.reg .reg-top-mask {
+  width: 724px;
+  height: 451px;
+  padding: 20px;
+  border: 2px solid;
+  border-color: red #dedede #dedede;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background: #fff;
+}
+.reg .reg-top-mask .reg-top-mask-main {
+  position: relative;
+}
+.reg .reg-top-mask .reg-top-mask-main .close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: red;
+  font-size: 36px;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 900;
+}
+.reg .reg-top-mask .reg-top-mask-main h3 {
+  font-size: 14px;
+  color: #3e3e3e;
+}
+.reg .reg-top-mask .reg-top-mask-main .reg-top-mask-body {
+  font-size: 14px;
+  color: #3e3e3e;
+}
+.reg .reg-top-mask .reg-top-mask-main .reg-top-mask-body a {
+  font-size: 14px;
+  color: red;
+  font-weight: 900;
+}
+.reg .reg-top-mask .reg-top-mask-main p {
+  margin: 8px 0 0 5px;
+}
+.reg .reg-top-mask .reg-top-mask-main p:nth-last-of-type(1) {
+  text-align: center;
+}
+.reg .reg-top-mask .reg-top-mask-main p button {
+  width: 180px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  background: red;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.reg .reg-main {
+  width: 100%;
+  height: 48px;
+  border-bottom: 2px solid #e6e6e6;
+}
+.reg .reg-main ul {
+  width: 720px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}
+.reg .reg-main ul i {
+  display: inline-block;
+  font-style: normal;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #999;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 900;
+}
+.reg .reg-main ul li {
+  text-align: center;
+  line-height: 48px;
+  width: 150px;
+  height: 48px;
+  margin-right: 30px;
+  font-weight: 900;
+  float: left;
+  color: #999;
+}
+.reg .reg-main ul .active {
+  border-bottom: 2px solid #ff4700;
+  color: #3e3e3e;
+}
+.reg .reg-main ul .active i {
+  background: #FF0036;
+}
+.reg .r1 {
+  width: 100%;
+  height: 191px;
+  padding: 50px 0;
+}
+.reg .r1 form {
+  width: 720px;
+  height: 191px;
+  margin: 0 auto;
+}
+.reg .r1 .form-list {
+  width: 720px;
+  height: 191px;
+}
+.reg .r1 .form-list .form-item {
+  width: 720px;
+  height: 57px;
+  padding: 10px 0 0 180px;
+}
+.reg .r1 .form-list .form-item span {
+  color: #3c3c3c;
+  font-size: 14px;
+  font-family: '宋体';
+  float: left;
+}
+.reg .r1 .form-list .form-item select {
+  width: 160px;
+  height: 35px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding-left: 10px;
+  margin-left: 20px;
+  float: left;
+}
+.reg .r1 .form-list .form-item input {
+  width: 140px;
+  height: 15px;
+  padding: 9px;
+  border: 1px solid #dedede;
+  font-family: '宋体';
+  border: none;
+  outline: none;
+  float: left;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  color: #ff0036;
+  line-height: 17px;
+  font-size: 14px;
+}
+.reg .r1 .form-list .form-item span {
+  line-height: 35px;
+}
+.reg .r1 .form-list .block {
+  width: 300px;
+  height: 34px;
+  background: #e8e8e8;
+  position: relative;
+  float: left;
+  margin-left: 26px;
+}
+.reg .r1 .form-list .block .block-txt {
+  width: 300px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  color: #3c3c3c;
+  line-height: 34px;
+  text-indent: 106px;
+  z-index: 2;
+}
+.reg .r1 .form-list .block .block-bg {
+  width: 0px;
+  height: 34px;
+  position: absolute;
+  left: 0%;
+  top: 0;
+  background: #7ac23c;
+  z-index: 1;
+}
+.reg .r1 .form-list .block .block-btn {
+  width: 40px;
+  height: 32px;
+  background: #fff;
+  border: 1px #ccc solid;
+  text-align: center;
+  line-height: 32px;
+  color: #737383;
+  cursor: move;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.reg .r1 .form-list .next {
+  width: 140px;
+  height: 36px;
+  padding: 0 20px;
+  background: #ededed;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-left: 68px;
+  cursor: auto;
+}
+.reg .r1 .form-list .next:hover {
+  background: #dedede;
+}
+
+/*# sourceMappingURL=reg.css.map */

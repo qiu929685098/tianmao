@@ -1,0 +1,1 @@
+import './libray/jquery.js';

@@ -35,11 +35,17 @@ a {
     text-decoration: none;
 }
 
+.listul {
+    overflow: hidden;
+}
+
 //引入mixin文件
 @import'./mixin/mixin';
 //引入css文件
-@import './index-top';
-@import './index-wall';
-@import './index-main';
-@import './index-footer';
-@import './index-hover';
+//首页样式
+@import './index/index-top';
+@import './index/index-top-nav';
+@import './index/index-wall';
+@import './index/index-main';
+@import './index/index-footer';
+@import './index/index-hover';

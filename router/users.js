@@ -20,20 +20,35 @@ const router = express.Router(); // 获得路由对象
 
 router.route('/reg')
     .post((req, res, next) => {
-        // console.log(req.body);
-        let md5 = crypto.createHash('md5'); // 创建一个哈希加密
-        let passResult = md5.update(req.body.password).digest('hex'); // 加密内容获得16进制结果
-        // console.log(passResult);
-        let sql = `insert into users(user_name, user_password,user_email, user_phone, user_address) 
-        values('${req.body.username}','${passResult}','${req.body.email}','${req.body.phone}','${req.body.address}')`;
-        // console.log(sql);
+        // 判断用户名是否存在
 
-        conn.query(sql, (err, result) => {
+        let searchUser = `select * from reg where username='${req.body.username}'`;
+        console.log(1);
+        conn.query(searchUser, (err, results) => {
             if (err) console.log(err);
-            if (result.insertId) {
-                res.cookie('username', req.body.username);
-                res.cookie('isLogined', true);
-                res.json({ msg: "注册成功" });
+            if (results.length) {
+                res.json({ msg: '用户名已存在', username: req.body.username, error: 1 });
+            } else {
+                let md5 = crypto.createHash('md5'); // 创建一个哈希加密
+                let passResult = md5.update(req.body.password).digest('hex'); // 加密内容获得16进制结果
+                console.log(passResult);
+
+                let sql = `insert into reg(username,password) 
+        values('${req.body.username}','${passResult}')`;
+
+
+                conn.query(sql, (err, result) => {
+                    if (err) console.log(err);
+                    if (result.insertId) {
+                        res.cookie('username', req.body.username);
+                        res.cookie('isLogined', true);
+                        res.json({
+                            msg: "注册成功",
+                            username: req.body.username,
+                            error: 0
+                        });
+                    }
+                });
             }
         });
     });

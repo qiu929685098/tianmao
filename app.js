@@ -1,15 +1,16 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const createError = require('http-errors');
 
 const app = express();
 const usersRouter = require('./router/users');
 const productRouter = require('./router/product');
 
-
+console.log(1);
 let conf = {
     port: 8888,
-    host: 'localhost'
+    host: '10.31.162.70'
 };
 
 // 配置静态web服务

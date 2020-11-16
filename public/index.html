@@ -8,10 +8,11 @@
     <title>天猫tmall.com--理想生活上天猫</title>
     <link rel="stylesheet" href="./css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.8.3/jquery.lazyload.min.js"></script>
     <script src="./js/index.js " type="module"></script>
 </head>
 
-<body style="background-color: #f5f5f5;">
+<body style="background-color: #f5f5f5;position: relative;">
     <!-- 顶部双十一宣传图 -->
     <div class="top">
         <div class="top-l"></div>
@@ -23,17 +24,103 @@
         <div class="top-nav-main">
             <ul class="l">
                 <li>喵，欢迎来天猫</li>
-                <li><a href="">请登录</a></li>
-                <li><a href="">免费注册</a></li>
+                <li><a href="./login.html">请登录</a></li>
+                <li><a href="./reg.html">免费注册</a></li>
             </ul>
             <ul class="r">
-                <a href="" class="a-hover">我的淘宝 <b></b></a>
+                <a href="" class="a-hover h-1">我的淘宝 <b></b>
+                    <ul class="h-1-1">
+                        <li>已买到的宝贝</li>
+                        <li>已卖出的宝贝</li>
+                    </ul>
+                </a>
                 <a href=""><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" "></span>购物车</a>
-                <a href="" class="a-hover ">收藏夹 <b></b></a>&nbsp;&nbsp;|
-                <a href=""><span class="glyphicon glyphicon-phone" aria-hidden="true" "></span>手机版</a>
+                <a href="" class="a-hover h-1">收藏夹 <b></b>
+                    <ul class="h-1-1">
+                        <li>收藏的宝贝</li>
+                        <li>收藏的店铺</li>
+                    </ul>
+                </a>&nbsp;&nbsp;|
+                <a href="" class="h-2"><span class="glyphicon glyphicon-phone" aria-hidden="true" "></span>手机版
+                    <div class="h-2-1">
+                        <div class="img"></div>
+                        <div class="p"></div>
+                    </div>
+                </a>
                 <a href="">淘宝网</a>
-                <a href="" class="a-hover ">商家支持 <b></b></a>
-                <a href=""><span class="glyphicon glyphicon-th-list" aria-hidden="true" "></span>网站导航 <b></b></a>
+                <a href="" class="a-hover h-3">商家支持 <b></b> 
+                    <div class="h-3-1">
+                        <p>商家：</p>
+                        <ul>
+                            <li>商家中心</li>
+                            <li>天猫规则</li>
+                            <li>商家入驻</li>
+                            <li>运营服务</li>
+                            <li>商家品控</li>
+                            <li>商家工具</li>
+                            <li>天猫智库</li>
+                            <li>喵言喵语</li>
+                        </ul>
+                        <p style="clear: both;">帮助：</p>
+                        <ul>
+                            <li>帮助中心</li>
+                            <li>问商友</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="" class="h-4"><span class="glyphicon glyphicon-th-list" aria-hidden="true" "></span>网站导航 <b></b>
+                    <div class="help">
+                        <div class="h-4-l">
+                            <h2>热点推荐  Hot</h2>
+                            <ul>
+                                <li>天猫超市</li>
+                                <li>喵鲜生</li>
+                                <li>科技新品<i></i></li>
+                                <li>女装新品<em></em></li>
+                                <li>酷玩街</li>
+                                <li>内衣新品<em></em></li>
+                                <li>试美妆</li>
+                                <li>运动新品</li>
+                                <li>时尚先生<em></em></li>
+                                <li>精明妈咪</li>
+                                <li>吃乐会<i></i></li>
+                                <li>企业采购</li>
+                                <li>会员积分</li>
+                                <li>天猫国际</li>
+                                <li>品质频道</li>
+                            </ul>
+                        </div>
+                        <div class="h-4-c">
+                            <h2>行业市场  Market</h2>
+                            <ul>
+                                <li>美妆</li>
+                                <li>电器</li>
+                                <li>女装<em></em></li>
+                                <li>男装<em></em></li>
+                                <li>女鞋</li>
+                                <li>男鞋</li>
+                                <li>内衣<em></em></li>
+                                <li>箱包</li>
+                                <li>运动</li>
+                                <li>母婴</li>
+                                <li>家装</li>
+                                <li>医药</li>
+                                <li>食品</li>
+                                <li>配饰<i></i></li>
+                                <li>汽车</li>
+                            </ul>
+                        </div>
+                        <div class="h-4-r">
+                            <h2>服务指南  Help</h2>
+                            <ul>
+                                <li>帮助中心</li>
+                                <li>品质保障</li>
+                                <li>特色服务</li>
+                                <li>7天退换货</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
             </ul>
         </div>
     </nav>
@@ -77,17 +164,86 @@
             <!-- 轮播图部分 -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-item"><img src="./images/wall01.png" alt="banner" /></div>
-                    <div class="swiper-item"><img src="./images/wall02.png" alt="banner" /></div>
-                    <div class="swiper-item"><img src="./images/wall03.png" alt="banner" /></div>
+                    <div class="swiper-item">
+                        <img src="./images/wall-1.jpg" alt="banner" />
+                        <div class="wall-simg">
+                            <a href="" class="wall-t wall-mask">
+                                <img src="./images/wall-1-1.jpg" alt="">
+                                <div></div>
+                            </a>
+                            <a href="" class="wall-b wall-mask">
+                                <img src="./images/wall-1-2.jpg" alt="">
+                                <div></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./images/wall-2.jpg" alt="banner" />
+                        <div class="wall-simg">
+                            <a href="" class="wall-t wall-mask">
+                                <img src="./images/wall-1-3.jpg" alt="">
+                                <div></div>
+                            </a>
+                            <a href="" class="wall-b wall-mask">
+                                <img src="./images/wall-1-4.jpg" alt="">
+                                <div></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./images/wall-3.jpg" alt="banner" />
+                        <div class="wall-simg">
+                            <a href="" class="wall-t wall-mask">
+                                <img src="./images/wall-1-5.jpg" alt="">
+                                <div></div>
+                            </a>
+                            <a href="" class="wall-b wall-mask">
+                                <img src="./images/wall-1-6.jpg" alt="">
+                                <div></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-item">
+                        <img src="./images/wall-4.jpg" alt="banner" />
+                        <div class="wall-simg">
+                            <a href="" class="wall-t wall-mask">
+                                <img src="./images/wall-1-5.jpg" alt="">
+                                <div></div>
+                            </a>
+                            <a href="" class="wall-b wall-mask">
+                                <img src="./images/wall-1-2.jpg" alt="">
+                                <div></div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 菜单部分 -->
             <div class="meun">
                 <ul class="button">
-                    <li class="active">商品分类</li>
-                    <li>20年双11</li>
+                    <li>商品分类</li>
+                    <li class="lihover">20年双11</li>
                 </ul>
+                <div class="r l" style="display: none;">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
                 <div class="r">
                     <ul>
                         <li><a href=""><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" "></span>服饰时尚</a></li>
@@ -102,8 +258,6 @@
                         <li><a href=""><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" "></span>通信充值</a></li>
                     </ul>
                 </div>
-                <!-- 第二个菜单 -->
-                <div class="r" style="display: none;"></div>
             </div>
             <!-- 天猫双11 -->
             <div class="title">
@@ -113,17 +267,17 @@
                     <div class="l1">
                         <h5>手表眼镜</h5>
                         <h6>每满300减40</h6>
-                        <img src="./images/title02.png" alt="">
+                        <img class="lazy" data-original="./images/title02.png" alt="">
                     </div>
                     <div class="l2">
                         <h5>潮电新品</h5>
                         <h6>每满300减40</h6>
-                        <img src="./images/title04.png" alt="">
+                        <img class="lazy" data-original="./images/title04.png" alt="">
                     </div>
                     <div class="l2 l3">
                         <h5>新锐内衣</h5>
                         <h6>爆款不止五折</h6>
-                        <img src="./images/title06.png" alt="">
+                        <img class="lazy" data-original="./images/title06.png" alt="">
                     </div>
                 </div>
                 <!-- 右半部分 -->
@@ -131,17 +285,17 @@
                     <div class="l1">
                         <h5>平价内衣</h5>
                         <h6>好货不止1折</h6>
-                        <img src="./images/title08.png" alt="">
+                        <img class="lazy" data-original="./images/title08.png" alt="">
                     </div>
                     <div class="l2">
                         <h5>潮电同城</h5>
                         <h6>好服务当日达</h6>
-                        <img src="./images/title10.png" alt="">
+                        <img class="lazy" data-original="./images/title10.png" alt="">
                     </div>
                     <div class="l2 l3">
                         <h5>美妆洗护</h5>
                         <h6>1元抢百元券</h6>
-                        <img src="./images/title12.png" alt="">
+                        <img class="lazy" data-original="./images/title12.png" alt="">
                     </div>
                 </div>
             </div>
@@ -154,7 +308,7 @@
                             <b class="en">BRAND SALE</b>
                             <a href=""></a>
                         </div>
-                        <img src="./images/buy01.jpg" alt="">
+                        <img class="lazy" data-original="./images/buy01.jpg" alt="">
                     </div>
                     <div class="buy-c">
                         <div class="head">
@@ -162,7 +316,7 @@
                             <b class="en">LUXURY CHANNEL</b>
                             <a href=""></a>
                         </div>
-                        <img src="./images/buy02.jpg" alt="">
+                        <img class="lazy" data-original="./images/buy02.jpg" alt="">
                     </div>
                     <div class="buy-r">
                         <div class="head">
@@ -170,1444 +324,818 @@
                             <b class="en">BRAND ACTIVITY</b>
                             <a href=""></a>
                         </div>
-                        <img src="./images/buy03.jpg" alt="">
+                        <img class="lazy" data-original="./images/buy03.jpg" alt="">
                     </div>
                 </div>
             </div>
             <!-- 品牌列表 -->
             <div class="brand">
                 <ul class="brand-main">
-                    <li><img src="./images/br01.jpg" alt=""></li>
-                    <li><img src="./images/br02.png" alt=""></li>
-                    <li><img src="./images/br03.png" alt=""></li>
-                    <li><img src="./images/br04.jpg" alt=""></li>
-                    <li><img src="./images/br05.jpg" alt=""></li>
-                    <li><img src="./images/br01.jpg" alt=""></li>
-                    <li><img src="./images/br03.png" alt=""></li>
-                    <li><img src="./images/br01.jpg" alt=""></li>
-                    <li><img src="./images/br02.png" alt=""></li>
-                    <li><img src="./images/br03.png" alt=""></li>
-                    <li><img src="./images/br04.jpg" alt=""></li>
-                    <li><img src="./images/br05.jpg" alt=""></li>
-                    <li><img src="./images/br02.png" alt=""></li>
-                    <li><img src="./images/br02.png" alt=""></li>
-                    <li><img src="./images/br01.jpg" alt=""></li>
-                    <li><img src="./images/br03.png" alt=""></li>
-                    <li><img src="./images/br02.png" alt=""></li>
-                    <li><img src="./images/br01.jpg" alt=""></li>
-                    <li><img src="./images/br02.png" alt=""></li>
-                    <li><img src="./images/br03.png" alt=""></li>
-                    <li><img src="./images/br04.jpg" alt=""></li>
-                    <li><img src="./images/br05.jpg" alt=""></li>
-                    <li><img src="./images/br02.png" alt=""></li>
-                    <li><img src="./images/br01.jpg" alt=""></li>
-                    <li><img src="./images/br03.png" alt=""></li>
-                    <li><img src="./images/br01.jpg" alt=""></li>
-                    <li><img src="./images/br02.png" alt=""></li>
-                    <li><img src="./images/br03.png" alt=""></li>
-                    <li><img src="./images/br04.jpg" alt=""></li>
-                    <li><img src="./images/br05.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br01.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br02.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br03.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br04.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br05.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br01.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br03.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br01.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br02.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br03.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br04.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br05.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br02.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br02.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br01.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br03.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br02.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br01.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br02.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br03.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br04.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br05.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br02.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br01.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br03.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br01.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br02.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br03.png" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br04.jpg" alt=""></li>
+                    <li><img class="lazy" data-original="./images/br05.jpg" alt=""></li>
                 </ul>
                 <ul class="mask">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mask-main">
+                            <span>优惠券￥200</span>
+                            <i>点击进入</i>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- ⚪商品部分 -->
+    <!-- 商品部份 -->
     <div class="center">
-        <div class="mart">
-            <div class="head"><img src="./images/main-title01.png" alt=""></div>
-            <div class="mart-main">
-                <div class="l">
-                    <a href=""><img src="./images/mart01.jpg" alt=""></a>
-                    <div class="l-title">
-                        <div class="l-title-l">
-                            <p>天猫超市</p>
+        <!-- ⚪天猫超市 -->
+        <div class="louceng">
+            <div class="mart">
+                <div class="head"><img src="./images/main-title01.png" alt=""></div>
+                <div class="mart-main">
+                    <div class="l">
+                        <a href=""><img class="lazy" data-original="./images/mart01.jpg" alt=""></a>
+                        <div class="l-title">
+                            <div class="l-title-l">
+                                <p>天猫超市</p>
+                            </div>
+                            <div class="l-title-r">
+                                <span>1499抢</span>
+                                <span>飞天茅台</span>
+                            </div>
                         </div>
-                        <div class="l-title-r">
-                            <span>1499抢</span>
-                            <span>飞天茅台</span>
-                        </div>
+                        <div class="b-title"></div>
                     </div>
-                    <div class="b-title"></div>
-                </div>
-                <div class="c">
-                    <div class="c-t">
-                        <div class="mart-tab">
-                            <ul>
-                                <li class="active">今日疯抢</li>
-                                <li>量贩装</li>
-                            </ul>
-                            <div class="tabs div">
-                                <a href="">
-                                    <div class="title">
-                                        <div class="t">
-                                            <img src="./images/mart04.png" alt="">
-                                            <span>进口牛奶</span>
+                    <div class="c">
+                        <div class="c-t">
+                            <div class="mart-tab">
+                                <ul>
+                                    <li class="active li1">今日疯抢</li>
+                                    <li class="li2">量贩装</li>
+                                </ul>
+                                <div class="tabs div1">
+                                    <a href="">
+                                        <div class="title">
+                                            <div class="t">
+                                                <img src="./images/mart04.png" alt="">
+                                                <span>进口牛奶</span>
+                                            </div>
+                                            <div class="b">第二件0元</div>
                                         </div>
-                                        <div class="b">第二件0元</div>
-                                    </div>
-                                    <img src="./images/mart02.jpg" alt="" class="titlebg">
-                                </a>
-                            </div>
-                            <div class="tabs">
-                                <a href="">
-                                    <div class="title">
-                                        <div class="t">
-                                            <img src="./images/mart04.png" alt="">
-                                            <span>全球零食</span>
+                                        <img class="titlebg" src=" ./images/mart02.jpg " alt=" ">
+                                    </a>
+                                </div>
+                                <div class="tabs div2">
+                                    <a href=" ">
+                                        <div class="title ">
+                                            <div class="t ">
+                                                <img src="./images/mart04.png" alt=" ">
+                                                <span>全球零食</span>
+                                            </div>
+                                            <div class="b ">第二件0元</div>
                                         </div>
-                                        <div class="b">第二件0元</div>
-                                    </div>
-                                    <img src="./images/mart03.jpg" alt="" class="titlebg">
-                                </a>
+                                        <img class="titlebg" src="./images/mart03.jpg " alt=" ">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-b ">
+                            <div class="c-b-l bg ">
+                                <div class="box ">
+                                    <img class="lazy " data-original="./images/mart001.jpg " alt=" ">
+                                    <div class="title ">蓝月亮衣物柔顺剂薰衣草持久留香3kg*2 柔软顺滑防静电</div>
+                                    <span class="spice ">￥59.9</span>
+                                </div>
+                            </div>
+                            <div class="c-b-r bg ">
+                                <div class="box ">
+                                    <img class="lazy " data-original="./images/mart003.jpg " alt=" ">
+                                    <div class="title ">【立即加购】统一汤达人日式豚骨拉面125g*5袋方便面泡面袋装速食</div>
+                                    <span class="spice ">￥21.5</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="c-b">
-                        <div class="c-b-l bg">
-                            <div class="box">
-                                <img src="./images/mart001.jpg" alt="">
-                                <div class="title">蓝月亮衣物柔顺剂薰衣草持久留香3kg*2 柔软顺滑防静电</div>
-                                <span class="spice">￥59.9</span>
+                    <div class="r ">
+                        <div class="r-t ">
+                            <div class="r-t-l bg ">
+                                <div class="box ">
+                                    <img class="lazy " data-original="./images/mart002.jpg " alt=" ">
+                                    <div class="title ">蓝月亮衣物柔顺剂薰衣草持久留香3kg*2 柔软顺滑防静电</div>
+                                    <span class="spice ">￥59.9</span>
+                                </div>
+                            </div>
+                            <div class="r-t-r bg ">
+                                <div class="box ">
+                                    <img class="lazy " data-original="./images/mart004.jpg " alt=" ">
+                                    <div class="title ">洁柔FACE抽纸巾家用实惠装卫生纸旗舰店官网整箱M码加厚130抽18包</div>
+                                    <span class="spice ">￥59.9</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="c-b-r bg">
-                            <div class="box">
-                                <img src="./images/mart003.jpg" alt="">
-                                <div class="title">【立即加购】统一汤达人日式豚骨拉面125g*5袋方便面泡面袋装速食</div>
-                                <span class="spice">￥21.5</span>
+                        <div class="r-b ">
+                            <div class="r-b-l bg ">
+                                <div class="box ">
+                                    <img class="lazy " data-original="./images/mart005.jpg " alt=" ">
+                                    <div class="title ">珍视明两面派温凉眼罩睡眠遮光睡觉透气男女冰感敷护眼罩单品包邮</div>
+                                    <span class="spice ">￥35</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="r">
-                    <div class="r-t">
-                        <div class="r-t-l bg">
-                            <div class="box">
-                                <img src="./images/mart002.jpg" alt="">
-                                <div class="title">蓝月亮衣物柔顺剂薰衣草持久留香3kg*2 柔软顺滑防静电</div>
-                                <span class="spice">￥59.9</span>
-                            </div>
-                        </div>
-                        <div class="r-t-r bg">
-                            <div class="box">
-                                <img src="./images/mart004.jpg" alt="">
-                                <div class="title">洁柔FACE抽纸巾家用实惠装卫生纸旗舰店官网整箱M码加厚130抽18包</div>
-                                <span class="spice">￥59.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="r-b">
-                        <div class="r-b-l bg">
-                            <div class="box">
-                                <img src="./images/mart005.jpg" alt="">
-                                <div class="title">珍视明两面派温凉眼罩睡眠遮光睡觉透气男女冰感敷护眼罩单品包邮</div>
-                                <span class="spice">￥35</span>
-                            </div>
-                        </div>
-                        <div class="r-b-r bg">
-                            <div class="box">
-                                <img src="./images/mart006.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
+                            <div class="r-b-r bg ">
+                                <div class="box ">
+                                    <img class="lazy " data-original="./images/mart006.jpg " alt=" ">
+                                    <div class="title ">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
+                                    <span class="spice ">￥79</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- ⚪天猫国际--模板 -->
-        <div class="buy-module">
-            <!-- 头部标题 -->
-            <div class="module-head"><img src="./images/HKtitle.png" alt=""></div>
-            <!-- 左边盒子 -->
-            <div class="module-main">
-                <div class="two">
-                    <div class="l">
-                        <a href=""><img src="./images/HK01.jpg" alt=""></a>
-                        <div class="l-title">
-                            <div class="l-title-l">
-                                <p>全球大牌</p>
+        <div class="louceng">
+            <div class="buy-module ">
+                <!-- 头部标题 -->
+                <div class="module-head "><img src="./images/HKtitle.png " alt=" "></div>
+                <!-- 左边盒子 -->
+                <div class="module-main ">
+                    <div class="two ">
+                        <div class="l ">
+                            <a href=" "><img class="lazy " data-original="./images/HK01.jpg " alt=" "></a>
+                            <div class="l-title ">
+                                <div class="l-title-l ">
+                                    <p>全球大牌</p>
+                                </div>
+                                <div class="l-title-r ">
+                                    <span>疯抢大额券</span>
+                                    <span>超值预定中</span>
+                                </div>
                             </div>
-                            <div class="l-title-r">
-                                <span>疯抢大额券</span>
-                                <span>超值预定中</span>
-                            </div>
+                            <div class="b-title "></div>
                         </div>
-                        <div class="b-title"></div>
-                    </div>
-                    <div class="l">
-                        <a href=""><img src="./images/HK02.jpg" alt=""></a>
-                        <div class="l-title">
-                            <div class="l-title-l">
-                                <p>进口大牌</p>
+                        <div class="l ">
+                            <a href=" "><img class="lazy " data-original="./images/HK02.jpg " alt=" "></a>
+                            <div class="l-title ">
+                                <div class="l-title-l ">
+                                    <p>进口大牌</p>
+                                </div>
+                                <div class="l-title-r ">
+                                    <span>付定立减</span>
+                                    <span>限时领福利</span>
+                                </div>
                             </div>
-                            <div class="l-title-r">
-                                <span>付定立减</span>
-                                <span>限时领福利</span>
-                            </div>
+                            <div class="b-title "></div>
                         </div>
-                        <div class="b-title"></div>
                     </div>
-                </div>
-                <!-- 右边盒子 -->
-                <div class="r">
-                    <ul>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">全球心选大牌</div>
-                                <span class="sspice">进口好物抢大额券</span>
-                                <img src="./images/HK03.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK05.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK06.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK08.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK05.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                    </ul>
+                    <!-- 右边盒子 -->
+                    <div class="r ">
+                        <ul class="listul"></ul>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- 活动标题 -->
-        <div class="h1">
-            <a href="">
-                <img src="./images/h101.jpg" alt="">
+        <div class="h1 ">
+            <a href=" ">
+                <img src="./images/h101.jpg " alt=" ">
             </a>
         </div>
         <!-- ⚪潮店酷玩 -->
-        <div class="buy-module">
-            <!-- 头部标题 -->
-            <div class="module-head">
-                <i> </i>
-                <div class="ch">潮店酷玩</div>
-                <span class="en">ELECTRONICS</span>
-            </div>
-            <!-- 左边盒子 -->
-            <div class="module-main">
-                <div class="l">
-                    <a href=""><img src="./images/play.jpg" alt=""></a>
-                    <div class="l-title">
-                        <div class="l-title-l">
-                            <p>大牌预售</p>
-                        </div>
-                        <div class="l-title-r">
-                            <span>品质家电</span>
-                            <span>限时5折</span>
-                        </div>
-                    </div>
-                    <div class="b-title"></div>
+        <div class="louceng">
+            <div class="buy-module ">
+                <!-- 头部标题 -->
+                <div class="module-head ">
+                    <i> </i>
+                    <div class="ch ">潮店酷玩</div>
+                    <span class="en ">ELECTRONICS</span>
                 </div>
-                <!-- 右边盒子 -->
-                <div class="r">
-                    <ul>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK08.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
+                <!-- 左边盒子 -->
+                <div class="module-main ">
+                    <div class="l ">
+                        <a href=" "><img class="lazy " data-original="./images/play.jpg " alt=" "></a>
+                        <div class="l-title ">
+                            <div class="l-title-l ">
+                                <p>大牌预售</p>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
+                            <div class="l-title-r ">
+                                <span>品质家电</span>
+                                <span>限时5折</span>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK05.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK06.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK08.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK05.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="b-title "></div>
+                    </div>
+                    <!-- 右边盒子 -->
+                    <div class="r ">
+                        <ul class="listul"></ul>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- ⚪美丽人生 -->
-        <div class="buy-module">
-            <!-- 头部标题 -->
-            <div class="module-head">
-                <i> </i>
-                <div class="ch">美丽人生</div>
-                <span class="en">FASHION & BEAUTY</span>
-            </div>
-            <!-- 左边盒子 -->
-            <div class="module-main">
-                <div class="l">
-                    <a href=""><img src="./images/life.jpg" alt=""></a>
-                    <div class="l-title">
-                        <div class="l-title-l">
-                            <p>大牌预售</p>
-                        </div>
-                        <div class="l-title-r">
-                            <span>品质家电</span>
-                            <span>限时5折</span>
-                        </div>
-                    </div>
-                    <div class="b-title"></div>
+        <div class="louceng">
+            <div class="buy-module ">
+                <!-- 头部标题 -->
+                <div class="module-head ">
+                    <i> </i>
+                    <div class="ch ">美丽人生</div>
+                    <span class="en ">FASHION & BEAUTY</span>
                 </div>
-                <!-- 右边盒子 -->
-                <div class="r">
-                    <ul>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK08.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
+                <!-- 左边盒子 -->
+                <div class="module-main ">
+                    <div class="l ">
+                        <a href=" "><img class="lazy " data-original="./images/life.jpg " alt=" "></a>
+                        <div class="l-title ">
+                            <div class="l-title-l ">
+                                <p>大牌预售</p>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
+                            <div class="l-title-r ">
+                                <span>品质家电</span>
+                                <span>限时5折</span>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK05.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK06.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK08.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK05.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="b-title "></div>
+                    </div>
+                    <!-- 右边盒子 -->
+                    <div class="r ">
+                        <ul class="listul"></ul>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- 活动标题 -->
-        <div class="h1">
-            <a href="">
-                <img src="./images/h102.jpg" alt="">
+        <div class="h1 ">
+            <a href=" ">
+                <img src="./images/h102.jpg " alt=" ">
             </a>
         </div>
         <!-- ⚪居家生活 -->
-        <div class="buy-module">
-            <!-- 头部标题 -->
-            <div class="module-head">
-                <i> </i>
-                <div class="ch">居家生活</div>
-                <span class="en">GROCERY & HEALTH</span>
-            </div>
-            <!-- 左边盒子 -->
-            <div class="module-main">
-                <div class="l">
-                    <a href=""><img src="./images/home01.jpg" alt=""></a>
-                    <div class="l-title">
-                        <div class="l-title-l">
-                            <p>厨房卫浴</p>
-                        </div>
-                        <div class="l-title-r">
-                            <span>1折秒杀</span>
-                            <span>狂欢不止</span>
-                        </div>
-                    </div>
-                    <div class="b-title"></div>
+        <div class="louceng">
+            <div class="buy-module ">
+                <!-- 头部标题 -->
+                <div class="module-head ">
+                    <i> </i>
+                    <div class="ch ">居家生活</div>
+                    <span class="en ">GROCERY & HEALTH</span>
                 </div>
-                <!-- 右边盒子 -->
-                <div class="r life">
-                    <ul>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">进口零食一扫光</div>
-                                <span class="sspice">次日就送达</span>
-                                <img src="./images/mart005.jpg" alt="" class="simg">
+                <!-- 左边盒子 -->
+                <div class="module-main ">
+                    <div class="l ">
+                        <a href=" "><img class="lazy " data-original="./images/home01.jpg " alt=" "></a>
+                        <div class="l-title ">
+                            <div class="l-title-l ">
+                                <p>厨房卫浴</p>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">来一场国宴</div>
-                                <span class="sspice">国酒名牌荟萃</span>
-                                <img src="./images/mart03.jpg" alt="" class="simg">
+                            <div class="l-title-r ">
+                                <span>1折秒杀</span>
+                                <span>狂欢不止</span>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">女孩爱毛绒玩具</div>
-                                <span class="sspice">俘获女神的心</span>
-                                <img src="./images/hk04.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">体内修复专家</div>
-                                <span class="sspice">排毒方能养颜</span>
-                                <img src="./images/HK03.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">一线大牌直销</div>
-                                <span class="sspice">进口放心药</span>
-                                <img src="./images/HK07.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">一把乐器</div>
-                                <span class="sspice">一本教材</span>
-                                <img src="./images/HK08.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">厨房空间专家</div>
-                                <span class="sspice">简约厨房套件</span>
-                                <img src="./images/HK03.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">给TA惊喜</div>
-                                <span class="sspice">最好的送花时节</span>
-                                <img src="./images/HK06.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="b-title "></div>
+                    </div>
+                    <!-- 右边盒子 -->
+                    <div class="r life ">
+                        <ul>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">进口零食一扫光</div>
+                                    <span class="sspice ">次日就送达</span>
+                                    <img class="lazy simg" data-original="./images/mart005.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">来一场国宴</div>
+                                    <span class="sspice ">国酒名牌荟萃</span>
+                                    <img class="lazy simg" data-original="./images/mart03.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">女孩爱毛绒玩具</div>
+                                    <span class="sspice ">俘获女神的心</span>
+                                    <img class="lazy simg" data-original="./images/hk04.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">体内修复专家</div>
+                                    <span class="sspice ">排毒方能养颜</span>
+                                    <img class="lazy simg" data-original="./images/HK03.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">一线大牌直销</div>
+                                    <span class="sspice ">进口放心药</span>
+                                    <img class="lazy simg" data-original="./images/HK07.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">一把乐器</div>
+                                    <span class="sspice ">一本教材</span>
+                                    <img class="lazy simg" data-original="./images/HK08.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">厨房空间专家</div>
+                                    <span class="sspice ">简约厨房套件</span>
+                                    <img class="lazy simg" data-original="./images/HK03.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">给TA惊喜</div>
+                                    <span class="sspice ">最好的送花时节</span>
+                                    <img class="lazy simg" data-original="./images/HK06.jpg " alt=" ">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+
         <!-- ⚪打造爱巢 -->
-        <div class="buy-module">
-            <!-- 头部标题 -->
-            <div class="module-head">
-                <i> </i>
-                <div class="ch">打造爱巢</div>
-                <span class="en">HOME</span>
-            </div>
-            <!-- 左边盒子 -->
-            <div class="module-main">
-                <div class="l">
-                    <a href=""><img src="./images/home.jpg" alt=""></a>
-                    <div class="l-title">
-                        <div class="l-title-l">
-                            <p>天猫家装</p>
-                        </div>
-                        <div class="l-title-r">
-                            <span>精选大牌</span>
-                            <span>好货不止5折</span>
-                        </div>
-                    </div>
-                    <div class="b-title"></div>
+        <div class="louceng">
+            <div class="buy-module ">
+                <!-- 头部标题 -->
+                <div class="module-head ">
+                    <i> </i>
+                    <div class="ch ">打造爱巢</div>
+                    <span class="en ">HOME</span>
                 </div>
-                <!-- 右边盒子 -->
-                <div class="r home">
-                    <ul>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">来一场国宴</div>
-                                <span class="sspice">国酒名牌荟萃</span>
-                                <img src="./images/mart03.jpg" alt="" class="simg">
+                <!-- 左边盒子 -->
+                <div class="module-main ">
+                    <div class="l ">
+                        <a href=" "><img class="lazy " data-original="./images/home.jpg " alt=" "></a>
+                        <div class="l-title ">
+                            <div class="l-title-l ">
+                                <p>天猫家装</p>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">女孩爱毛绒玩具</div>
-                                <span class="sspice">俘获女神的心</span>
-                                <img src="./images/hk04.jpg" alt="" class="simg">
+                            <div class="l-title-r ">
+                                <span>精选大牌</span>
+                                <span>好货不止5折</span>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">一把乐器</div>
-                                <span class="sspice">一本教材</span>
-                                <img src="./images/HK08.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">厨房空间专家</div>
-                                <span class="sspice">简约厨房套件</span>
-                                <img src="./images/HK03.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">进口零食一扫光</div>
-                                <span class="sspice">次日就送达</span>
-                                <img src="./images/mart005.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">体内修复专家</div>
-                                <span class="sspice">排毒方能养颜</span>
-                                <img src="./images/HK03.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">一线大牌直销</div>
-                                <span class="sspice">进口放心药</span>
-                                <img src="./images/HK07.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <div class="stitle">给TA惊喜</div>
-                                <span class="sspice">最好的送花时节</span>
-                                <img src="./images/HK06.jpg" alt="" class="simg">
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="b-title "></div>
+                    </div>
+                    <!-- 右边盒子 -->
+                    <div class="r home ">
+                        <ul>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">来一场国宴</div>
+                                    <span class="sspice ">国酒名牌荟萃</span>
+                                    <img class="lazy simg" data-original="./images/mart03.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">女孩爱毛绒玩具</div>
+                                    <span class="sspice ">俘获女神的心</span>
+                                    <img class="lazy simg" data-original="./images/hk04.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">一把乐器</div>
+                                    <span class="sspice ">一本教材</span>
+                                    <img class="lazy simg" data-original="./images/HK08.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">厨房空间专家</div>
+                                    <span class="sspice ">简约厨房套件</span>
+                                    <img class="lazy simg" data-original="./images/HK03.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">进口零食一扫光</div>
+                                    <span class="sspice ">次日就送达</span>
+                                    <img class="lazy simg" data-original="./images/mart005.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">体内修复专家</div>
+                                    <span class="sspice ">排毒方能养颜</span>
+                                    <img class="lazy simg" data-original="./images/HK03.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">一线大牌直销</div>
+                                    <span class="sspice ">进口放心药</span>
+                                    <img class="lazy simg" data-original="./images/HK07.jpg " alt=" ">
+                                </div>
+                            </li>
+                            <li class="bg ">
+                                <div class="box ">
+                                    <div class="stitle ">给TA惊喜</div>
+                                    <span class="sspice ">最好的送花时节</span>
+                                    <img class="lazy simg" data-original="./images/HK06.jpg " alt=" ">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- 活动标题 -->
-        <div class="h1">
-            <a href="">
-                <img src="./images/h103.jpg" alt="">
+        <div class="h1 ">
+            <a href=" ">
+                <img src="./images/h103.jpg " alt=" ">
             </a>
         </div>
         <!-- ⚪户外出行 -->
-        <div class="buy-module">
-            <!-- 头部标题 -->
-            <div class="module-head">
-                <i> </i>
-                <div class="ch">户外出行</div>
-                <span class="en">OUTDOORS & AUTOMOTIVE</span>
-            </div>
-            <!-- 左边盒子 -->
-            <div class="module-main">
-                <div class="l">
-                    <a href=""><img src="./images/car.jpg" alt=""></a>
-                    <div class="l-title">
-                        <div class="l-title-l">
-                            <p>汽车养护</p>
-                        </div>
-                        <div class="l-title-r">
-                            <span>精选好货</span>
-                            <span>立即加购</span>
-                        </div>
-                    </div>
-                    <div class="b-title"></div>
+        <div class="louceng">
+            <div class="buy-module ">
+                <!-- 头部标题 -->
+                <div class="module-head ">
+                    <i> </i>
+                    <div class="ch ">户外出行</div>
+                    <span class="en ">OUTDOORS & AUTOMOTIVE</span>
                 </div>
-                <!-- 右边盒子 -->
-                <div class="r">
-                    <ul>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK08.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
+                <!-- 左边盒子 -->
+                <div class="module-main ">
+                    <div class="l ">
+                        <a href=" "><img class="lazy " data-original="./images/car.jpg " alt=" "></a>
+                        <div class="l-title ">
+                            <div class="l-title-l ">
+                                <p>汽车养护</p>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
+                            <div class="l-title-r ">
+                                <span>精选好货</span>
+                                <span>立即加购</span>
                             </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK05.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK06.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK08.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK04.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                        <li class="bg">
-                            <div class="box">
-                                <img src="./images/HK05.jpg" alt="">
-                                <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                                <span class="spice">￥79</span>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="b-title "></div>
+                    </div>
+                    <!-- 右边盒子 -->
+                    <div class="r ">
+                        <ul class="listul"></ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ⚪猜你喜欢 -->
-    <div class="center like">
-        <!-- 标题部分 -->
-        <h2>
-            <span><span class="glyphicon glyphicon-heart-empty" aria-hidden="true" style="color: #FF0036;"></span> 猜你喜欢</span>
-        </h2>
-        <div class="like-main">
-            <ul>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-                <li class="bg">
-                    <div class="box">
-                        <img src="./images/HK05.jpg" alt="">
-                        <div class="title">康夫电吹风机大功率发型师理发店专用电风吹负离子护发家用风筒17</div>
-                        <span class="spice">￥79</span>
-                    </div>
-                </li>
-            </ul>
+        <!-- ⚪猜你喜欢 -->
+        <div class="louceng">
+            <div class="center like ">
+                <!-- 标题部分 -->
+                <h2>
+                    <span><span class="glyphicon glyphicon-heart-empty " aria-hidden="true " style="color: #FF0036; "></span> 猜你喜欢</span>
+                </h2>
+                <div class="like-main ">
+                    <ul class="listul"></ul>
+                    <ul class="listul"></ul>
+                </div>
+            </div>
         </div>
     </div>
     <!-- ⚪底部标题 -->
-    <div class="center">
-        <div class="font-title"></div>
+    <div class="center ">
+        <div class="font-title "></div>
     </div>
     <footer>
-        <div class="center">
+        <div class="center ">
             <!-- 标题链接 -->
-            <div class="title">
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
+            <div class="title ">
+                <a href=" "></a>
+                <a href=" "></a>
+                <a href=" "></a>
+                <a href=" "></a>
             </div>
-            <div class="c">
+            <div class="c ">
                 <ul>
-                    <li class="c-li">购物指南</li>
-                    <li><a href="">免费注册</a></li>
-                    <li><a href="">开通支付宝</a></li>
-                    <li><a href="">支付宝充值</a></li>
+                    <li class="c-li ">购物指南</li>
+                    <li><a href=" ">免费注册</a></li>
+                    <li><a href=" ">开通支付宝</a></li>
+                    <li><a href=" ">支付宝充值</a></li>
                 </ul>
                 <ul>
-                    <li class="c-li">天猫保障</li>
-                    <li><a href="">发票保障</a></li>
-                    <li><a href="">售后规则</a></li>
-                    <li><a href="">缺货赔付</a></li>
+                    <li class="c-li ">天猫保障</li>
+                    <li><a href=" ">发票保障</a></li>
+                    <li><a href=" ">售后规则</a></li>
+                    <li><a href=" ">缺货赔付</a></li>
                 </ul>
                 <ul>
-                    <li class="c-li">支付方式</li>
-                    <li><a href="">快捷方式</a></li>
-                    <li><a href="">信用卡</a></li>
-                    <li><a href="">余额宝</a></li>
-                    <li><a href="">蚂蚁花呗</a></li>
-                    <li><a href="">货到付款</a></li>
+                    <li class="c-li ">支付方式</li>
+                    <li><a href=" ">快捷方式</a></li>
+                    <li><a href=" ">信用卡</a></li>
+                    <li><a href=" ">余额宝</a></li>
+                    <li><a href=" ">蚂蚁花呗</a></li>
+                    <li><a href=" ">货到付款</a></li>
                 </ul>
                 <ul>
-                    <li class="c-li">商家服务</li>
-                    <li><a href="">天猫规则</a></li>
-                    <li><a href="">商家入驻</a></li>
-                    <li><a href="">商家中心</a></li>
-                    <li><a href="">天猫智库</a></li>
-                    <li><a href="">物流服务</a></li>
-                    <li><a href="">喵言喵语</a></li>
-                    <li><a href="">运营服务</a></li>
+                    <li class="c-li ">商家服务</li>
+                    <li><a href=" ">天猫规则</a></li>
+                    <li><a href=" ">商家入驻</a></li>
+                    <li><a href=" ">商家中心</a></li>
+                    <li><a href=" ">天猫智库</a></li>
+                    <li><a href=" ">物流服务</a></li>
+                    <li><a href=" ">喵言喵语</a></li>
+                    <li><a href=" ">运营服务</a></li>
                 </ul>
                 <ul>
-                    <li class="c-li">手机天猫</li>
-                    <img src="./images/font-c-img.png" alt="">
+                    <li class="c-li ">手机天猫</li>
+                    <img src="./images/font-c-img.png " alt=" ">
                 </ul>
             </div>
-            <div class="bottom">
-                <p class="b1">
-                    <a href="">关于天猫</a>
-                    <a href="">帮助中心</a>
-                    <a href="">开放平台</a>
-                    <a href="">诚聘英才</a>
-                    <a href="">联系我们</a>
-                    <a href="">网站合作</a>
-                    <a href="">法律声明</a>
-                    <a href="">隐私权政策</a>
-                    <a href="">知识产权</a>
-                    <a href="">廉政举报</a>
-                    <a href="">规则意见征集</a>
+            <div class="bottom ">
+                <p class="b1 ">
+                    <a href=" ">关于天猫</a>
+                    <a href=" ">帮助中心</a>
+                    <a href=" ">开放平台</a>
+                    <a href=" ">诚聘英才</a>
+                    <a href=" ">联系我们</a>
+                    <a href=" ">网站合作</a>
+                    <a href=" ">法律声明</a>
+                    <a href=" ">隐私权政策</a>
+                    <a href=" ">知识产权</a>
+                    <a href=" ">廉政举报</a>
+                    <a href=" ">规则意见征集</a>
                 </p>
-                <p class="b2">
-                    <a href="">阿里巴巴集团</a>|
-                    <a href="">淘宝网</a>|
-                    <a href="">天猫</a>|
-                    <a href="">聚划算</a>|
-                    <a href="">全球速卖通</a>|
-                    <a href="">阿里巴巴国际交易市场</a>|
-                    <a href="">1688</a>|
-                    <a href="">阿里妈妈</a>|
-                    <a href="">飞猪</a>|
-                    <a href="">阿里云计算</a>|
-                    <a href="">AliOS</a>|
-                    <a href="">阿里通信</a>|
-                    <a href="">万网</a>|
-                    <a href="">高德</a>|
-                    <a href="">UC</a>|
-                    <a href="">友盟</a>|
-                    <a href="">虾米</a>|
-                    <a href="">钉钉</a>|
-                    <a href="">支付宝</a>|
-                    <a href="">阿里安全</a>|
+                <p class="b2 ">
+                    <a href=" ">阿里巴巴集团</a>|
+                    <a href=" ">淘宝网</a>|
+                    <a href=" ">天猫</a>|
+                    <a href=" ">聚划算</a>|
+                    <a href=" ">全球速卖通</a>|
+                    <a href=" ">阿里巴巴国际交易市场</a>|
+                    <a href=" ">1688</a>|
+                    <a href=" ">阿里妈妈</a>|
+                    <a href=" ">飞猪</a>|
+                    <a href=" ">阿里云计算</a>|
+                    <a href=" ">AliOS</a>|
+                    <a href=" ">阿里通信</a>|
+                    <a href=" ">万网</a>|
+                    <a href=" ">高德</a>|
+                    <a href=" ">UC</a>|
+                    <a href=" ">友盟</a>|
+                    <a href=" ">虾米</a>|
+                    <a href=" ">钉钉</a>|
+                    <a href=" ">支付宝</a>|
+                    <a href=" ">阿里安全</a>|
                 </p>
-                <div class="b-bg">
-                    <img src="./images/foot-b-bg.jpg" alt="">
+                <div class="b-bg ">
+                    <img src="./images/foot-b-bg.jpg " alt=" ">
                 </div>
             </div>
         </div>
-
     </footer>
+    <!-- 顶部弹出和楼层效果 -->
+    <div class="top-mask">
+        <div class="center top-mask-main">
+            <img src="./images/top-mask-logo.jpg" alt="">
+            <div class="top-mask-form">
+                <form action="">
+                    <label for="top-mask-input" class="s-combobox-placeholder">搜索 天猫 商品/品牌/店铺</label>
+                    <input type="text" id="top-mask-input">
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边栏导航条 -->
+    <div class="side">
+        <div class="side-nav">导航</div>
+        <div class="side-main">
+            <a href="#">天猫超市</a>
+            <a href="#">天猫国际</a>
+            <a href="#">美丽人生</a>
+            <a href="#">潮电酷玩</a>
+            <a href="#">居家生活</a>
+            <a href="#">打造爱巢</a>
+            <a href="#">户外出行</a>
+            <a href="#">猜你喜欢</a>
+            <a href="#"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true" "></span>顶部</a>
+        </div>
+    </div>
 
 
 
+
+    <!-- <div id="timebox" style="
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        background: pink;
+        border-radius: 50px;
+        z-index: 100;
+        text-align: center;
+        line-height: 100px;
+        font-size: 24px;
+        font-weight: 900;
+    "></div> -->
 </body>
-
-<!-- <script src="./js/libray/jquery.js "></script>
-<script src="./js/libray/jquery-banner.js "></script>
-<script>
-    $(".swiper-container ").carousel({
-        width: 1230,
-        height: 500,
-        speed: 5000,
-        needPrevAndNextBtnGroup: true,
-        needPagination: true
-    });
-</script> -->
 
 </html>
