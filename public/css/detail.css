@@ -463,6 +463,14 @@ header .top-nav {
   margin-left: -180px;
 }
 
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none;
+}
+
 .detail {
   width: 100%;
   height: 604px;
@@ -476,38 +484,46 @@ header .top-nav {
   width: 460px;
   height: 100%;
 }
-.detail .de-l #small {
+.detail .de-l .scale {
+  margin: 60px 0 0 20px;
+}
+.detail .de-l .spic {
   width: 420px;
   height: 420px;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
+  float: left;
+  position: relative;
 }
-.detail .de-l #small img {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-.detail .de-l #small #mark {
+.detail .de-l .sf {
   width: 100px;
   height: 100px;
-  background-color: white;
   opacity: 0.5;
+  background: orange;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 0px;
+  top: 0px;
+  cursor: move;
 }
-.detail .de-l #big {
-  width: 420px !important;
-  height: 420px !important;
-  position: absolute;
-  left: 430px;
-  top: 0;
+.detail .de-l .spic img {
+  width: 400px;
+  height: 400px;
+  display: block;
+}
+.detail .de-l .bf {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ccc;
+  float: left;
   overflow: hidden;
-  z-index: 1;
+  position: relative;
+  margin-left: -1px;
 }
-.detail .de-l #big img {
-  width: 750px;
-  height: 1095px;
+.detail .de-l .bpic {
   position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 900px;
+  height: 900px;
 }
 .detail .de-l ul {
   width: 100%;
@@ -570,9 +586,12 @@ header .top-nav {
   font-weight: 900;
 }
 .detail .de-c .hd p {
+  width: 200px;
+  height: 20px;
   font-size: 14px;
   color: #ff0036;
   margin: 0;
+  overflow: hidden;
 }
 .detail .de-c .title {
   width: 510px;
@@ -594,6 +613,7 @@ header .top-nav {
   height: 100%;
 }
 .detail .de-c .title p del {
+  font-size: 16px;
   color: #333;
   font-family: Arial;
 }
@@ -781,10 +801,11 @@ header .top-nav {
   border-color: #a7a6ab transparent transparent transparent;
 }
 .detail .de-c .de-c-main .de2 span:nth-of-type(2) {
-  width: 168px;
+  width: 52px;
   margin-left: 20px;
 }
 .detail .de-c .de-c-main .de2 span:nth-of-type(2) em {
+  color: #228800;
   font-style: normal;
 }
 .detail .de-c .de-c-main .de3 {

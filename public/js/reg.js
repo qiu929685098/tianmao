@@ -96,7 +96,7 @@ import cookie from './libray/cookie.js';
     };
     //七、验证手机号
     let telflag = false;
-    $('.username').on('blur', function() {
+    $('.username').on('input', function() {
         if (this.value !== '') {
             var reg = /^1[345789]\d{9}$/;
             if (reg.test(this.value)) {

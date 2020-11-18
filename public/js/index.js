@@ -25,7 +25,7 @@ $('.lazy').lazyload({
         $('.tabs').eq($(this).index()).show().siblings('.tabs').hide();
     });
     $('.mart-tab ul li').on('mouseout', function() {
-        D1 = window.setInterval(fn, 600);
+        D1 = window.setInterval(fn, 1000);
     });
 
     function fn() {
@@ -33,7 +33,7 @@ $('.lazy').lazyload({
         $('.li2').toggleClass('active');
         $('.tabs').eq($('.mart-tab>ul>.active').index()).show().siblings('.tabs').hide();
     }
-    let D1 = window.setInterval(fn, 600);
+    let D1 = window.setInterval(fn, 1000);
 }();
 
 //顶部弹出框
@@ -94,11 +94,9 @@ $(window).on('scroll', function() {
             console.log(res);
             let tempLi = '';
             res.forEach((elm, i) => {
-                // let picture = JSON.parse(elm[i].picture);
-                // console.log(picture);
                 tempLi += `<li class="bg">
                 <div class="box">
-                    <a href="./detail.html?id=${elm.sid}">
+                    <a href="./detail.html?id=${elm.id}">
                         <img class="lazy " src="./images/loading.gif" data-original="${elm.url}" alt=" " >
                         <div class="title ">${elm.title}</div>
                         <span class="spice ">￥${elm.price}</span>

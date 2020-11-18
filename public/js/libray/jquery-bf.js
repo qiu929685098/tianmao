@@ -1,82 +1,52 @@
 ! function() {
+    //比例思维：根据公式
+    //大图/小图 = 大放/小放
+    const scale = $('.scale');
+    const spic = $('.spic');
+    const sf = $('.sf');
+    const bpic = $('.bpic');
+    const bf = $('.bf');
+    //1.spic添加鼠标移入移出事件，让对象小放和大放显示。
+    spic.on('mouseover', function() {
+        sf.css('visibility', 'visible');
+        bf.css('visibility', 'visible');
+        //2.重新获取小放的尺寸同时求得彼此放大的比例
+        console.log(bpic.width());
+        sf.width(spic.width() * bf.width() / bpic.width());
+        sf.height(spic.height() * bf.height() / bpic.height());
 
-    // 倍数，times  想放大的倍数
-    // id,对应的id 
-    $.fn.imgzoom = function(o) {
-        var e = this;
-        // 找到图片
-        let img = $(this).find("img").eq(0),
-            s = {
-                width: "100px",
-                height: "100px",
-                backgroundColor: "white",
-                opacity: "0.5",
-                left: "0",
-                top: "0"
-            };
-        // console.log(img)
-        o && $.extend(!0, s, o)
-            // console.log(s.times)
-        s.times == null ? s.times = 3 : null
-        s.id == null ? s.id = "#small" : null
-        if (s.times <= 1) {
-            s.times = 1.5
-        } else {
-            s.times = s.times
-        }
-        // 设置进入
-        $(this).hover(function() {
-                let mark = $("<div id='mark'></div>"),
-                    big = $("<div id='big'>"),
-                    src = img.attr("src"),
-                    // console.log(src[1])
-                    bigImg = $("<img src=" + src + " />")
-                    // console.log(bigImg)
-                $(e).append(mark),
-                    $(big).append(bigImg),
-                    $(e).after(big)
+        //3.放大的比例>1
+        let bili = bpic.width() / spic.width();
 
-                let w = $(s.id).width()
-                let h = $(s.id).height()
+        //4.spic添加鼠标移动
+        spic.on('mousemove', function(ev) {
 
-                $("#big").css({
-                        width: 100 * s.times + "px",
-                        height: 100 * s.times - 5 + "px"
-                    })
-                    // console.log(w)
-                $("#big img").css({
-                        width: w * s.times + "px",
-                        height: h * s.times + "px"
-                    })
-                    // console.log(365/s.times*(s.times-1))
-                $(e).off("mousemove"),
-                    $(e).on("mousemove", function(o) {
-                        var i = o || window.event;
-                        // console.log(i)
-                        mark = $(e).find("#mark");
-                        let l = o.pageX - $(this).offset().left - 50;
-                        let t = o.pageY - $(this).offset().top - 50;
-                        // console.log(l)
-                        l <= 0 && (l = 0);
-                        l >= 150 && (l = 150);
-                        t <= 0 && (t = 0);
-                        t >= 265 && (t = 265);
-                        mark.css({
-                            left: l,
-                            top: t
-                        })
-                        $("#big img").css({
-                                left: -(s.times) * l,
-                                top: -(s.times) * t
-                            })
-                            // console.log(s.times)
 
-                    })
-            },
-            function() {
-                // 移除 
-                $(e).find("#mark").remove(),
-                    $("#big").remove()
-            })
-    }
+            var ev = ev || window.event;
+            //限定范围
+            let l = ev.clientX - scale.offsetLeft - sf.width() / 2;
+            let t = ev.clientY - scale.offsetTop - sf.height() / 2;
+            console.log(scale.offsetLeft);
+            if (l <= 0) {
+                l = 0;
+            } else if (l >= spic.width() - sf.width() - 2) {
+                l = spic.width() - sf.width() - 2;
+            }
+
+            if (t <= 0) {
+                t = 0;
+            } else if (t >= spic.height() - sf.height() - 2) {
+                t = spic.height() - sf.height() - 2;
+            }
+            sf.css('left', `${l} + px`);
+            sf.css('top', `${t} + px`);
+
+            bpic.css('left', `${-l * bili} + px`);
+            bpic.css('top', `${-t * bili} + px`);
+        });
+    });
+    spic.on('mouseleave', function() {
+        sf.css('visibility', 'hidden');
+        bf.css('visibility', 'hidden');
+    });
 }();
