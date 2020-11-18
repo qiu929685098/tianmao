@@ -153,8 +153,8 @@ header {
             width: 420px;
             height: 420px;
             border: 1px solid #ccc;
-            float: left;
             position: relative;
+            background: #fff;
         }
         .sf {
             width: 100px;
@@ -164,7 +164,6 @@ header {
             position: absolute;
             left: 0px;
             top: 0px;
-            // visibility: hidden;
             cursor: move;
         }
         .spic img {
@@ -176,11 +175,14 @@ header {
             width: 500px;
             height: 500px;
             border: 1px solid #ccc;
-            float: left;
+            position: absolute;
+            background: #fff;
+            left: 430px;
+            top: -420px;
             overflow: hidden;
             position: relative;
             margin-left: -1px;
-            // visibility: hidden;
+            z-index: 10;
         }
         .bpic {
             position: absolute;

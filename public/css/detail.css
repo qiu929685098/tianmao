@@ -491,8 +491,8 @@ header .top-nav {
   width: 420px;
   height: 420px;
   border: 1px solid #ccc;
-  float: left;
   position: relative;
+  background: #fff;
 }
 .detail .de-l .sf {
   width: 100px;
@@ -513,10 +513,14 @@ header .top-nav {
   width: 500px;
   height: 500px;
   border: 1px solid #ccc;
-  float: left;
+  position: absolute;
+  background: #fff;
+  left: 430px;
+  top: -420px;
   overflow: hidden;
   position: relative;
   margin-left: -1px;
+  z-index: 10;
 }
 .detail .de-l .bpic {
   position: absolute;
